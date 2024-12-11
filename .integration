@@ -1,1 +1,2 @@
-command = python ./vedoms.py
+command = python module.py
+settings_file_name = settings.json
