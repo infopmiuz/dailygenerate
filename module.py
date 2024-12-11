@@ -1,12 +1,3 @@
-import sys
-import subprocess
-
-installed_dependencies = subprocess.check_output(
-    [sys.executable, '-m', 'pip', 'install', '-r', 'python_dependencies.ini']).decode().strip()
-if 'Successfully installed' in installed_dependencies:
-    raise Exception('Some required dependent libraries were installed. ' \
-        'Module execution has to be terminated now to use installed libraries on the next scheduled launch.')
-
 import onevizion
 import json
 
