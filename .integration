@@ -1,2 +1,2 @@
-command = python module.py
+command = python3 module.py
 settings_file_name = settings.json
