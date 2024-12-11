@@ -5,7 +5,7 @@ with open('settings.json', 'rb') as PFile:
  settings = json.loads(PFile.read().decode('utf-8'))
 
 try:
-	OvAccessKey = settings['OvAccessKey']
+  OvAccessKey = settings['OvAccessKey']
   OvSecretKey = settings['OvSecretKey']
   DOMAIN =settings['OvDomainName']  
 except Exception as e:
