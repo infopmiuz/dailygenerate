@@ -16,6 +16,7 @@ Req.read(filters = {'POC_POSITION2':'Хокимият'},
 		fields = ['TRACKOR_KEY','XITOR_KEY_ALT1','POC_POSITION2'], 
 		sort = {'TRACKOR_KEY':'ASC'}, page = 1, perPage = 1000)
 for rec in Req.jsonData:
+  updateFields = {}
   updateFields['POC_POSITION_USER'] = 'Тест'
   Req.update(filters = {'TRACKOR_ID': rec['TRACKOR_ID']}, fields = updateFields)
 
