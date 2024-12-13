@@ -13,9 +13,9 @@ except Exception as e:
 
 Req = onevizion.Trackor(trackorType = 'USERS', URL = DOMAIN, userName=OvAccessKey, password=OvSecretKey, isTokenAuth=True)
 Req.read(filters = {'POC_POSITION2':'Хокимият'}, 
-		fields = ['XITOR_KEY_ALT1','POC_POSITION2'], 
+		fields = ['TRACKOR_KEY','XITOR_KEY_ALT1','POC_POSITION2'], 
 		sort = {'TRACKOR_KEY':'ASC'}, page = 1, perPage = 1000)
 for rec in Req.jsonData:
   updateFields['POC_POSITION_USER'] = 'Тест'
-  ##Req.update(filters = {'TRACKOR_ID': rec['TRACKOR_ID']}, fields = updateFields)
+  Req.update(filters = {'TRACKOR_ID': rec['TRACKOR_ID']}, fields = updateFields)
 
